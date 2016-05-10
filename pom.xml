@@ -242,25 +242,25 @@
 					<version>1.0.0</version>
 					<configuration>
 						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>org.jacoco</groupId>
-										<artifactId>
-											jacoco-maven-plugin
-										</artifactId>
-										<versionRange>
-											[0.6.2,)
-										</versionRange>
-										<goals>
-											<goal>prepare-agent</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore/>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
+							<!--<pluginExecutions>-->
+							<!--	<pluginExecution>-->
+							<!--		<pluginExecutionFilter>-->
+							<!--			<groupId>org.jacoco</groupId>-->
+							<!--			<artifactId>-->
+							<!--				jacoco-maven-plugin-->
+							<!--			</artifactId>-->
+							<!--			<versionRange>-->
+							<!--				[0.6.2,)-->
+							<!--			</versionRange>-->
+							<!--			<goals>-->
+							<!--				<goal>prepare-agent</goal>-->
+							<!--			</goals>-->
+							<!--		</pluginExecutionFilter>-->
+							<!--		<action>-->
+							<!--			<ignore/>-->
+							<!--		</action>-->
+							<!--	</pluginExecution>-->
+							<!--</pluginExecutions>-->
 						</lifecycleMappingMetadata>
 					</configuration>
 				</plugin>
@@ -286,29 +286,29 @@
 					<repoToken>jb6wYzxkVvjolD6qOWpzWdcWBzYk2fAmF</repoToken>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>${jacoco.version}</version>
+			<!--<plugin>-->
+			<!--	<groupId>org.jacoco</groupId>-->
+			<!--	<artifactId>jacoco-maven-plugin</artifactId>-->
+			<!--	<version>${jacoco.version}</version>-->
 				<!-- The following exclude configuration was added because error occurred
-					when executing "mvn clean test jacoco:report coveralls:report" -->
+			<!--		when executing "mvn clean test jacoco:report coveralls:report" -->-->
 				<!-- [ERROR] Failed to execute goal org.eluder.coveralls:coveralls-maven-plugin:3.1.0:report
-					(default-cli) on project java-design-patterns: I/O operation failed: No source
-					found for domainapp/dom/modules/simple/QSimpleObject.java -> [Help 1] -->
-				<configuration>
-					<excludes>
-						<exclude>domainapp/dom/modules/simple/QSimpleObject.class</exclude>
-					</excludes>
-				</configuration>
-				<executions>
-					<execution>
-						<id>prepare-agent</id>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+			<!--		(default-cli) on project java-design-patterns: I/O operation failed: No source-->
+			<!--		found for domainapp/dom/modules/simple/QSimpleObject.java -> [Help 1] -->-->
+			<!--	<configuration>-->
+			<!--		<excludes>-->
+			<!--			<exclude>domainapp/dom/modules/simple/QSimpleObject.class</exclude>-->
+			<!--		</excludes>-->
+			<!--	</configuration>-->
+			<!--	<executions>-->
+			<!--		<execution>-->
+			<!--			<id>prepare-agent</id>-->
+			<!--			<goals>-->
+			<!--				<goal>prepare-agent</goal>-->
+			<!--			</goals>-->
+			<!--		</execution>-->
+			<!--	</executions>-->
+			<!--</plugin>-->
 
 			<!--checkstyle plug-in. checking against googles styles
 			   see config at checkstyle.xml
@@ -336,25 +336,25 @@
 				</executions>
 			</plugin>
 
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.7.5.201505241946</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>report</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+			<!--<plugin>-->
+			<!--	<groupId>org.jacoco</groupId>-->
+			<!--	<artifactId>jacoco-maven-plugin</artifactId>-->
+			<!--	<version>0.7.5.201505241946</version>-->
+			<!--	<executions>-->
+			<!--		<execution>-->
+			<!--			<goals>-->
+			<!--				<goal>prepare-agent</goal>-->
+			<!--			</goals>-->
+			<!--		</execution>-->
+			<!--		<execution>-->
+			<!--			<id>report</id>-->
+			<!--			<phase>prepare-package</phase>-->
+			<!--			<goals>-->
+			<!--				<goal>report</goal>-->
+			<!--			</goals>-->
+			<!--		</execution>-->
+			<!--	</executions>-->
+			<!--</plugin>-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
