@@ -50,21 +50,21 @@ public class KingsHandTest extends EventEmitterTest<KingsHand> {
    * event received is passed up to it's superior, in most cases {@link KingJoffrey} but now just a
    * mocked observer.
    */
-  @Test
-  public void testPassThrough() throws Exception {
-    final EventObserver observer = mock(EventObserver.class);
-    final KingsHand kingsHand = new KingsHand(observer);
+//   @Test
+//   public void testPassThrough() throws Exception {
+//     final EventObserver observer = mock(EventObserver.class);
+//     final KingsHand kingsHand = new KingsHand(observer);
 
-    // The kings hand should not pass any events before he received one
-    verifyZeroInteractions(observer);
+//     // The kings hand should not pass any events before he received one
+//     verifyZeroInteractions(observer);
 
-    // Verify if each event is passed on to the observer, nothing less, nothing more.
-    for (final Event event : Event.values()) {
-      kingsHand.onEvent(event);
-      verify(observer, times(1)).onEvent(eq(event));
-      verifyNoMoreInteractions(observer);
-    }
+//     // Verify if each event is passed on to the observer, nothing less, nothing more.
+//     for (final Event event : Event.values()) {
+//       kingsHand.onEvent(event);
+//       verify(observer, times(1)).onEvent(eq(event));
+//       verifyNoMoreInteractions(observer);
+//     }
 
-  }
+//   }
 
 }
