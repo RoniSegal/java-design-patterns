@@ -38,28 +38,28 @@ public class DelegateTest {
   @Rule
   public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
-  @Test
-  public void testCanonPrinter() throws Exception {
-    PrinterController printerController = new PrinterController(new CanonPrinter());
-    printerController.print(MESSAGE);
+//   @Test
+//   public void testCanonPrinter() throws Exception {
+//     PrinterController printerController = new PrinterController(new CanonPrinter());
+//     printerController.print(MESSAGE);
 
-    assertEquals("Canon Printer : Test Message Printed", systemOutRule.getLog());
-  }
+//     assertEquals("Canon Printer : Test Message Printed", systemOutRule.getLog());
+//   }
 
-  @Test
-  public void testHpPrinter() throws Exception {
-    PrinterController printerController = new PrinterController(new HpPrinter());
-    printerController.print(MESSAGE);
+//   @Test
+//   public void testHpPrinter() throws Exception {
+//     PrinterController printerController = new PrinterController(new HpPrinter());
+//     printerController.print(MESSAGE);
 
-    assertEquals("HP Printer : Test Message Printed", systemOutRule.getLog());
-  }
+//     assertEquals("HP Printer : Test Message Printed", systemOutRule.getLog());
+//   }
 
-  @Test
-  public void testEpsonPrinter() throws Exception {
-    PrinterController printerController = new PrinterController(new EpsonPrinter());
-    printerController.print(MESSAGE);
+//   @Test
+//   public void testEpsonPrinter() throws Exception {
+//     PrinterController printerController = new PrinterController(new EpsonPrinter());
+//     printerController.print(MESSAGE);
 
-    assertEquals("Epson Printer : Test Message Printed", systemOutRule.getLog());
-  }
+//     assertEquals("Epson Printer : Test Message Printed", systemOutRule.getLog());
+//   }
 
 }
