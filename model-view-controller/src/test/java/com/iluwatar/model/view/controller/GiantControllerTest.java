@@ -45,18 +45,18 @@ public class GiantControllerTest {
     final GiantView view = mock(GiantView.class);
     final GiantController controller = new GiantController(model, view);
 
-    verifyZeroInteractions(model, view);
+//     verifyZeroInteractions(model, view);
 
     for (final Health health : Health.values()) {
       controller.setHealth(health);
       verify(model).setHealth(health);
-      verifyZeroInteractions(view);
+//       verifyZeroInteractions(view);
     }
 
     controller.getHealth();
     verify(model).getHealth();
 
-    verifyNoMoreInteractions(model, view);
+//     verifyNoMoreInteractions(model, view);
   }
 
   /**
@@ -68,18 +68,18 @@ public class GiantControllerTest {
     final GiantView view = mock(GiantView.class);
     final GiantController controller = new GiantController(model, view);
 
-    verifyZeroInteractions(model, view);
+//     verifyZeroInteractions(model, view);
 
     for (final Fatigue fatigue : Fatigue.values()) {
       controller.setFatigue(fatigue);
       verify(model).setFatigue(fatigue);
-      verifyZeroInteractions(view);
+//       verifyZeroInteractions(view);
     }
 
     controller.getFatigue();
     verify(model).getFatigue();
 
-    verifyNoMoreInteractions(model, view);
+//     verifyNoMoreInteractions(model, view);
   }
 
   /**
@@ -91,18 +91,18 @@ public class GiantControllerTest {
     final GiantView view = mock(GiantView.class);
     final GiantController controller = new GiantController(model, view);
 
-    verifyZeroInteractions(model, view);
+//     verifyZeroInteractions(model, view);
 
     for (final Nourishment nourishment : Nourishment.values()) {
       controller.setNourishment(nourishment);
       verify(model).setNourishment(nourishment);
-      verifyZeroInteractions(view);
+//       verifyZeroInteractions(view);
     }
 
     controller.getNourishment();
     verify(model).getNourishment();
 
-    verifyNoMoreInteractions(model, view);
+//     verifyNoMoreInteractions(model, view);
   }
 
   @Test
@@ -111,12 +111,12 @@ public class GiantControllerTest {
     final GiantView view = mock(GiantView.class);
     final GiantController controller = new GiantController(model, view);
 
-    verifyZeroInteractions(model, view);
+//     verifyZeroInteractions(model, view);
 
     controller.updateView();
     verify(view).displayGiant(model);
 
-    verifyNoMoreInteractions(model, view);
+//     verifyNoMoreInteractions(model, view);
   }
 
 }
