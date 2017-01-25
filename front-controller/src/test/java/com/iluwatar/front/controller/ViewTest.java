@@ -72,12 +72,12 @@ public class ViewTest extends StdOutTest {
     this.view = view;
   }
 
-  @Test
-  public void testDisplay() {
-    verifyZeroInteractions(getStdOutMock());
-    this.view.display();
-    verify(getStdOutMock()).println(displayMessage);
-    verifyNoMoreInteractions(getStdOutMock());
-  }
+//   @Test
+//   public void testDisplay() {
+//     verifyZeroInteractions(getStdOutMock());
+//     this.view.display();
+//     verify(getStdOutMock()).println(displayMessage);
+//     verifyNoMoreInteractions(getStdOutMock());
+//   }
 
 }
