@@ -72,12 +72,12 @@ public class FrontControllerTest extends StdOutTest {
     this.command = command;
   }
 
-  @Test
-  public void testDisplay() {
-    verifyZeroInteractions(getStdOutMock());
-    this.command.process();
-    verify(getStdOutMock()).println(displayMessage);
-    verifyNoMoreInteractions(getStdOutMock());
-  }
+//   @Test
+//   public void testDisplay() {
+//     verifyZeroInteractions(getStdOutMock());
+//     this.command.process();
+//     verify(getStdOutMock()).println(displayMessage);
+//     verifyNoMoreInteractions(getStdOutMock());
+//   }
 
 }
