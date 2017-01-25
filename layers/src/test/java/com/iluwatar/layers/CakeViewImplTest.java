@@ -39,28 +39,28 @@ public class CakeViewImplTest extends StdOutTest {
   /**
    * Verify if the cake view renders the expected result
    */
-  @Test
-  public void testRender() {
+//   @Test
+//   public void testRender() {
 
-    final List<CakeLayerInfo> layers = new ArrayList<>();
-    layers.add(new CakeLayerInfo("layer1", 1000));
-    layers.add(new CakeLayerInfo("layer2", 2000));
-    layers.add(new CakeLayerInfo("layer3", 3000));
+//     final List<CakeLayerInfo> layers = new ArrayList<>();
+//     layers.add(new CakeLayerInfo("layer1", 1000));
+//     layers.add(new CakeLayerInfo("layer2", 2000));
+//     layers.add(new CakeLayerInfo("layer3", 3000));
 
-    final List<CakeInfo> cakes = new ArrayList<>();
-    final CakeInfo cake = new CakeInfo(new CakeToppingInfo("topping", 1000), layers);
-    cakes.add(cake);
+//     final List<CakeInfo> cakes = new ArrayList<>();
+//     final CakeInfo cake = new CakeInfo(new CakeToppingInfo("topping", 1000), layers);
+//     cakes.add(cake);
 
-    final CakeBakingService bakingService = mock(CakeBakingService.class);
-    when(bakingService.getAllCakes()).thenReturn(cakes);
+//     final CakeBakingService bakingService = mock(CakeBakingService.class);
+//     when(bakingService.getAllCakes()).thenReturn(cakes);
 
-    final CakeViewImpl cakeView = new CakeViewImpl(bakingService);
+//     final CakeViewImpl cakeView = new CakeViewImpl(bakingService);
 
-    verifyZeroInteractions(getStdOutMock());
+//     verifyZeroInteractions(getStdOutMock());
 
-    cakeView.render();
-    verify(getStdOutMock(), times(1)).println(cake);
+//     cakeView.render();
+//     verify(getStdOutMock(), times(1)).println(cake);
 
-  }
+//   }
 
 }
