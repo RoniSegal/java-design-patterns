@@ -72,13 +72,13 @@ public class CommandTest extends StdOutTest {
     this.request = request;
   }
 
-  @Test
-  public void testDisplay() {
-    final FrontController frontController = new FrontController();
-    verifyZeroInteractions(getStdOutMock());
-    frontController.handleRequest(request);
-    verify(getStdOutMock()).println(displayMessage);
-    verifyNoMoreInteractions(getStdOutMock());
-  }
+//   @Test
+//   public void testDisplay() {
+//     final FrontController frontController = new FrontController();
+//     verifyZeroInteractions(getStdOutMock());
+//     frontController.handleRequest(request);
+//     verify(getStdOutMock()).println(displayMessage);
+//     verifyNoMoreInteractions(getStdOutMock());
+//   }
 
 }
