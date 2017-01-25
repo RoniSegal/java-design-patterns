@@ -71,16 +71,16 @@ public class GiantViewTest {
    * Verify if the {@link GiantView} does what it has to do: Print the {@link GiantModel} to the
    * standard out stream, nothing more, nothing less.
    */
-  @Test
-  public void testDisplayGiant() {
-    final GiantView view = new GiantView();
+//   @Test
+//   public void testDisplayGiant() {
+//     final GiantView view = new GiantView();
 
-    final GiantModel model = mock(GiantModel.class);
-    view.displayGiant(model);
+//     final GiantModel model = mock(GiantModel.class);
+//     view.displayGiant(model);
 
-    verify(this.stdOutMock).println(model);
-    verifyNoMoreInteractions(model, this.stdOutMock);
+//     verify(this.stdOutMock).println(model);
+//     verifyNoMoreInteractions(model, this.stdOutMock);
 
-  }
+//   }
 
 }
